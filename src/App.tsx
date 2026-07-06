@@ -12,7 +12,7 @@ function App() {
       <Grid sx={{ display: { xs: "none", md: "block"} }} size={{ xs: 12, md: 12 }}><HeaderUI/></Grid>
 
       {/* Alertas */}
-      <Grid sx={{ display: { xs: "none", md: "block"} }} size={{ xs: 12, md: 12 }} container sx={{ justifyContent: "right", alignItems: "center" }} ><AlertUI description="No se preveen lluvias"/></Grid>
+      <Grid size={{ xs: 12, md: 12 }} container sx={{ justifyContent: "right", alignItems: "center" }} ><AlertUI description="No se preveen lluvias"/></Grid>
 
       {/* Selector */}
       <Grid sx={{ display: { xs: "none", md: "block"} }} size={{ xs: 12, md: 3 }}>Elemento: Selector</Grid>
