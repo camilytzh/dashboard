@@ -5,9 +5,12 @@ import AlertUI from './components/AlertUI';
 import SelectorUI from './components/SelectorUI';
 import IndicatorUI from './components/IndicatorUI';
 import useFetchData from './hooks/useFetchData';
+import TableUI from './components/TableUI';
+import ChartUI from './components/ChartUI';
 
 function App() {
   const dataFetcherOutput = useFetchData();
+  
   return (
     <Grid container spacing={5} sx={{ justifyContent: "left", alignItems: "center" }}>
 
@@ -56,12 +59,17 @@ function App() {
         </Grid>
 
       </Grid>
+      
       {/* Gráfico */}
-      <Grid sx={{ display: { xs: "none", md: "block" } }} size={{ xs: 12, md: 6 }}>Elemento: Gráfico</Grid>
+      <Grid size={{ xs: 6, md: 6 }} sx={{ display: { xs: "none", md: "block" } }}>
+        <ChartUI data={dataFetcherOutput} />
+      </Grid>
 
       {/* Tabla */}
-      <Grid sx={{ display: { xs: "none", md: "block" } }} size={{ xs: 12, md: 6 }}>Elemento: Tabla</Grid>
-
+      <Grid size={{ xs: 6, md: 6 }} sx={{ display: { xs: "none", md: "block" } }}>
+        <TableUI data={dataFetcherOutput} />
+      </Grid>
+      
       {/* Información adicional */}
       <Grid sx={{ display: { xs: "none", md: "block" } }} size={{ xs: 12, md: 12 }}>Elemento: Información adicional</Grid>
 
